@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Sentiment Demo</title>
+
+<p><a href="../cv">CV</a></p>
+<p><a href="../poetry">neuron poetry</a></p>
+<p><a href="../sentiment">sentiment</a></p>
+
+
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Введите текст обзора на мобильный телефон: <br>
+        <dd><textarea name=text rows=20 cols=100>{{ text }}</textarea>
+        <dd><input type=submit value="Оценить отзыв">
+
+    </dl>
+
+</form>
+
+<br>Тональность отзыва:<br>
+{{ prediction_message }}
+
+
+
